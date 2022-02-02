@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- important tag  start -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- important tag  end -->
+   
+    <title>Home Page</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+        *{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;
+            font-family: 'Mulish', sans-serif;
+            }
+            html{
+  scroll-behavior: smooth;
+ 
+}
+            /* html{font-size: 62.5%;} */
+        main{height: 100vh; background-image: linear-gradient(to top right , dodgerblue , rgb(56, 56, 255) , rgb(78, 117, 235));}
+        /* header{display: flex;} */
+        /* header{height: 20vh;} */
+        header ul{background-color: dodgerblue;color: white;list-style-type: none;display: flex;justify-content: space-around;}
+        header ul li{ position: relative;}
+        header ul li a{color: white;border: 0px solid green;font-weight: 900;padding: 10px;display: block;}
+ /* header ul li a:hover{opacity: .4;} */
+
+
+ header ul li:before{
+     content: '';
+     border-top: 2px solid white;
+     /* height: 0; */
+     width: 100%;
+     position: absolute;
+     top: 0;
+     /* height: 1px; */
+     display: none;
+ }
+ header ul li:hover  :after{
+     content: '';
+     border: 1px solid white;
+     /* height: 0; */
+      position: absolute;
+    bottom: 0;
+     /* width: 100%; */
+     left: 0;
+     /* height: 1px; */
+     animation-name: nav-btn-line-effect;
+     animation-timing-function: linear;
+     animation-duration: 1s;
+     /* animation-direction: alternate; */
+
+ }
+
+   @keyframes nav-btn-line-effect{
+       from{
+width: 0;
+       }
+       to{
+width: 100%;
+
+       }
+   }
+
+
+
+
+         header ul li ul{position: absolute; width: 0;top:40px;display: flex;flex-direction: column;}
+          
+          /* header  ul li:focus-within>ul,
+        header  ul li:hover>ul {
+            display: block;
+        } */
+        .content{display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;}
+        .left{text-align: center;color: white; width: 40%;}
+        .right-img{width: 50%;}
+        /* .left p{ display: inline-block;} */
+        .joinus-btn{
+            padding: 13px 25px;border-radius: 30px;
+            background-image: linear-gradient( to top right, dodgerblue ,yellow);
+        }
+        /* .........................service-sec........................ */
+        .service-sec{background-color:#B6C9F0;}
+        .service-sec .round-img-box{width: 150px;}
+        .service-sec-title{text-align: center; padding: 10px 0;color: white; background-color: dodgerblue;}
+        .service-sec-container{display: flex; justify-content: space-around;  flex-wrap: wrap;border: 0px solid red ;padding: 15px;}
+         .service-sec-container-item{border: 0px solid lime;flex-grow: 1; padding: 10px;text-align: center;margin: 0 10px;background-color: white;
+            margin: 10px;
+        /* position: relative;
+    display: inline-block; */
+        display: flex;
+        justify-content: space-around;
+        /* animation-iteration-count: ; */
+       align-items: center;
+       /* box-shadow: 3px 3px 5px 3px dodgerblue, inset 3px 3px 5px 3px dodgerblue; */
+   
+    
+    }
+    /* #tutorials-link{
+       
+       
+    } */
+    #tutorials-link ul{list-style-type: none;}
+    #tutorials-link ul li {margin:5px; background-color: dodgerblue;}
+    #tutorials-link a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 5px;
+        font-weight: 600;
+    }
+    #tutorials-link a:hover{
+        border: 1px solid dodgerblue;
+        background-color: white;
+        color: dodgerblue;
+    }
+    .overlay-1{
+         width: 100%;
+    height: 0;
+    bottom:0;
+    left:0;
+    background-color: #941e33;
+    }
+    .overlay:hover{
+        opacity: 1;
+    }
+    .overlay{
+         position: absolute;
+    opacity: 0;
+    transition:all .3s ease;
+    background-color: #008cba;
+
+    }
+     .service-sec-container-item:hover .overlay-1{
+height: 100%;
+     }
+         /* .service-sec-container-item:hover{
+             background-color: crimson;
+           visibility: visible;
+           animation-name: overlay;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+         } */
+
+         /* @keyframes overlay{
+             from{height: 0;}
+             to{height: 100%;}
+         } */
+         /*........ ...footer................................................  */
+         footer{display: flex;justify-content: space-around;flex-wrap: wrap;background-color: #5C7AEA;color: white;}
+          footer > div{border: 0px solid red;    text-align: left;padding: 15px; cursor: pointer;}
+            footer > div ul li:hover{
+                color: darkgreen;
+            }
+           footer div h3{padding: 10px 0}
+           footer div ul{list-style-type: none}
+           footer div ul li{padding: 10px 0;font-weight: 600;}
+           footer div ul li a{color: white;}
+            footer div ul li i{font-size:18px ;padding-right: 5px;}
+img{
+    width: 100%;
+    object-fit: contain;
+}
+           @keyframes blow-up-title{
+               from{transform: scale(1);}
+               to{transform: scale(1.2);}
+           }
+         /* ..................fact section.............  */
+          #fact-section{padding: 25px;display: flex;justify-content: space-around;flex-wrap: wrap;}
+           .fact-sec-title{font-size: 25px;font-weight: bolder;text-align: center;padding: 10px 0;}
+           .fact-item{
+padding: 5px;
+
+
+              width: 30%;
+           /* border:3px dotted dodgerblue; */
+           margin: 20px 15px;
+     font-weight: 600;
+     text-align: center;
+     color: white;
+     background-color: dodgerblue;
+        
+           }
+         
+           .fact-no{
+             /* display:inline-block; */
+
+               width: 50px;
+               height: 50px;
+              background-color: white;
+               color: dodgerblue;
+     
+               border-radius: 30px;
+               font-size: 20px;
+               display: grid;
+               place-items: center;
+               border:1px solid dodgerblue;
+          float: left;
+           transform: translate(0,-60%);
+
+              
+           }
+           
+           /* thouoghts section  */
+           #thoughts-section{
+               background-color: crimson;
+               padding:10px;
+               display: flex;
+               justify-content: space-around;
+              flex-wrap: wrap;
+               
+           }
+           #thoughts-outer{
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+             width: 300px;
+               border: 1px dotted white;
+             color: white;
+             font-weight: 500;
+               text-align: center;
+               padding: 10px;
+             font-family: Georgia, 'Times New Roman', Times, serif;
+               display: flex;
+               justify-content: center;
+               flex-direction: column;
+               align-items: center;
+              margin: 10px;
+           }
+            #thoughts-outer:hover {
+color: crimson;
+background-color: white;
+            }
+           /* #thoughts-outer:hover > #thoughts-img{
+transform: translateY(-50%);
+              display: block;
+           } */
+          #thoughts-img  {
+              width: 65px;
+             height: 65px;
+            background-color: white;
+border-radius: 50%;
+              
+           }
+          
+             #thoughts-img img{ border-radius: 50px;}
+          #thought-content{
+              letter-spacing: 1.5px;
+              text-align: center;
+              padding-top: 5px;
+          }
+          #thought-author{padding-top: 7px; font-style: italic;font-weight: 600;text-decoration: underline;}
+          @media screen and (max-width:754px) {
+              main{
+                  height: 100%;
+              }
+              .content{
+                  flex-direction: column-reverse;
+              }
+              .left{width: 100%;}
+
+               #fact-section{
+                   flex-direction: column;
+               }
+               .fact-item{
+                   width: 100%;
+                   margin: 17px 5px;
+               }
+               #thoughts-outer{
+                   width: 100%;
+               }
+                 footer{
+                     flex-direction: column;
+                 }
+          }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <!-- <div>&lt;CodingSeekho &gt;</div> -->
+           <ul>
+            <li><a href="#">Home</a></li>
+           <li> <a href="#">Tutorials</a>
+        <!-- <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Mysqli</a></li>
+
+        </ul> -->
+        
+        </li>
+           <li><a href="#">Blog</a></li>
+           <li><a href="#">Hosting</a></li>
+           <li>  <a href="#">Contact Us</a></li>
+        </ul>  </header>
+          
+       <section class="content">
+           <div class="left">
+<h1 style="font-size: 30px;"><span style="color: yellow;"> Learn Coding Biginner</span> to Advance :</h1><br>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nam dolore doloremque repellat libero quia voluptatibus hic ratione. Fuga magni consectetur eveniet culpa. Optio suscipit eaque odit illum aut labore.</p><br>
+<p style="font-size: 24px;font-weight: bolder; animation-iteration-count: infinite; animation-name: blow-up-title;animation-timing-function: linear;animation-duration: 2s;animation-direction: alternate;">Now , become a pro developer</p><br>
+<a class="joinus-btn" href="#">Join Us</a>
+
+           </div>
+
+            <div class="right-img">
+            <img src="./media/img/coding-kids.png" alt="">
+            </div>
+       </section>
+            
+      
+          
+       
+    </main>
+   <br> <p class="fact-sec-title"> Our Top Tutorials </p><hr><br>
+
+    <section class="service-sec">
+       
+      
+        <div class="service-sec-container">
+            <div class="service-sec-container-item learn1">
+              
+             
+              <!-- <div class="overlay-1 overlay"></div> -->
+<div class="round-img-box"> <img src="./media/img/html-logo.png"  alt=""></div>
+<div id="tutorials-link">
+   
+    <ul>
+        <li><a href="#">Start HTML & HTML5 Tutorials</a></li>
+        <li><a href="./media/Interview-question/top-60-html-&-html3-Interview-questions.pdf" download>Interview Question</a></li>
+        <li><a href="#">Download PDF</a></li>
+    </ul>
+</div>
+
+            </div>
+            <div class="service-sec-container-item learn2">
+                <div class="round-img-box"> <img src="./media/img/css-logo.png"  alt=""></div>
+                <div  id="tutorials-link">
+                
+                    <ul>
+                    <li><a href="#">Start CSS & CSS3 Tutorials</a></li>
+                    <li><a href="./media/Interview-question/css3-interview-question.pdf">Interview Question</a></li>
+                    <li><a href="#">Download PDF</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="service-sec-container-item learn3">
+                <div class="round-img-box"> <img src="./media/img/javascript-logo.png"  alt=""></div>
+                <div  id="tutorials-link">
+                    
+                    <ul>
+                        <li><a href="#">Start JavaScript Tutorials</a></li>
+                        <li><a href="./media/Interview-question/Frequently Asked JavaScript Interview Questions and Answers for Fresher.pdf">Interview Question</a></li>
+                        <li><a href="#">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-sec-container-item learn4">
+                <div class="round-img-box"> <img src="./media/img/php-logo.png" alt=""></div>
+                <div  id="tutorials-link">
+                   
+                    <ul>
+                        <li><a href="#">Start PHP Tutorials</a></li>
+                        <li><a href="./media/Interview-question/PHP_top_Interview_Questions_Answers_Guide.pdf">Interview Question</a></li>
+                        <li><a href="#">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-sec-container-item learn5">
+                <div class="round-img-box"> <img src="./media/img/mysqli-logo.png" alt=""></div>
+                <div  id="tutorials-link">
+                
+                    <ul>
+                        <li><a href="#">Start MYSQLI Tutorials</a></li>
+                        <li><a href="./media/Interview-question/Top 50 MySQL Interview Questions & Answers.pdf">Interview Question</a></li>
+                        <li><a href="#">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-sec-container-item learn6">
+                <div class="round-img-box"> <img src="./media/img/c-lang-logo.png"  alt=""></div>
+                <div  id="tutorials-link">
+                   
+                    <ul>
+                        <li><a href="#">Start C Tutorials</a></li>
+                        <li><a href="./media/Interview-question/css3-interview-question.pdf">Interview Question</a></li>
+                        <li><a href="#">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   <br> <p class="fact-sec-title" style="color: dodgerblue;"> Some Interesting Programming Facts </p><hr><br>
+    <section id="fact-section">
+        <!--  -->
+
+       <div class="fact-item fact1">
+       <span class="fact-no">#1</span>
+There are approximately 700 coding languages. 
+       </div>
+
+        <div class="fact-item fact2">
+            <span class="fact-no">#2</span>
+            Fortran (FORmula TRANslation) was the first coding language created by John Backus and his team at IBM in the 1950s.
+        </div>
+
+        <div class="fact-item fact3">
+            <span class="fact-no">#3</span>
+        ADA is a coding language built in 1980 that is used by the International Space Station. In 1995, this programming
+        language was accepted as an international standard programming language.
+        </div>
+
+        <div class="fact-item fact4">
+            <span class="fact-no">#4</span>
+        The first-ever programmer on the earth was a woman named Ada Lovelace.
+        </div>
+
+        <div class="fact-item fact5">
+            <span class="fact-no">#5</span>
+        It took less code to send a man to space than to run a smartphone!
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#6</span>
+        The average salary of a computer programmer is $64,261 annually.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#7</span>
+        Python was NOT named after a snake.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#8</span>
+        Java was called Oak at the starting
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#9</span>
+    Steve Jobs and Steve Wozniak, co-founders of Apple, began their coding careers as teenagers.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#10</span>
+        C is the only language that exists for the longest period in programming history
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#11</span>
+           The word computer "bug" was inspired by real bug .It was founded by Grace Hopper in 1947.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#12</span>
+            People who program computers are usually  required to learn  more than 1 programming language.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">#13</span>
+        Almost anything powered by electricity requires code.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">14</span>
+        A coder’s job title can range from: coders, programmers, developers, computer scientists and software engineers.
+        </div>
+
+        <div class="fact-item fact1">
+            <span class="fact-no">15</span>
+        The first computer game Spacewar. was created in 1961. MIT programmer Steve Russell and his team spent around 200 hours writing the first version of the game.
+        </div>
+
+
+
+    </section>
+
+    <!-- ...............thought section start........................  -->
+    <br>
+        <p class="fact-sec-title" style="color: crimson;"> Great Programming Thoughts by Great Programmers </p><hr>
+    <br>
+    <section id="thoughts-section">
+     
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/Martin Foler.jpg" alt=""></div>
+
+<div id="thought-content"> <q>Any fool can write code that a computer can understand.Good programmers write code that humans can understand </q>  </div>
+<div id="thought-author">- Martin Foler-</div>
+        </div>
+
+
+    <div id="thoughts-outer">
+        <div id="thoughts-img"><img src="./media/img/Stephen-Hawking-programming-thoughts.jpg" alt=""></div>
+    
+        <div id="thought-content"> Wheather you want to uncover the secrets of the universe , or you just want to pursue a career in the 21st century,basic computer programming is an essential skill to learn</div>
+        <p id="thought-author">- Stephen Hawking-</p>
+    </div>
+
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/bill-gates-programming-thoughts.png" alt=""></div>
+        
+            <div id="thought-content">Software is more important then hardware.</div>
+            <p id="thought-author"> - Bill Gates-</p>
+        </div>
+
+
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/Patrick-McKenzie.jpg" alt=""></div>
+        
+            <div id="thought-content"> Most good programmer do Programming not because they expect to get paid or get adulation by the public , but because it is funto program.  </div>
+            <p id="thought-author">- Linus Torvalds-</p>
+        </div>
+        
+        
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/Steve-Jobs-programming-thoughts.png" alt=""></div>
+        
+            <div id="thought-content"> Everyone should know to program a computer , because it teaches you how to think. </div>
+                    <p id="thought-author">- Steve Jobs -</p>
+        </div>
+        
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/Mark-Zukerburg-programming-thoughts.jpg" alt=""></div>
+        
+            <div id="thought-content"> All my friends who have younger siblings who are going to college or high school - my number one piece of advice is : you should learn how to program </q> 
+                </div>
+                <p id="thought-author">-Mark Zukerburg-</p>
+        </div>
+
+
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/steve_mcconnell-programming-thoughts.jpg" alt=""></div>
+        
+            <div id="thought-content"> "Good code its own best Documentation.As you're about to add comment ,ask yourself,'How can I improve the codes so that this comment isn't needed ?' </div>
+            <p id="thought-author">-Steve C.MacConnell- </p>
+        </div>
+
+        <div id="thoughts-outer">
+            <div id="thoughts-img"><img src="./media/img/Mario Fusco.jpg" alt=""></div>
+        
+            <div id="thought-content"> "The code you write makes you a programmer. The code you delete makes you a good one .The code don't have to write makes you a great one" </div>
+            <p id="thought-author">-Mario Fusco-</p>
+        </div>
+    </section>
+
+    <!-- ...............thought section end........................  -->
+
+
+
+   <hr>
+    <footer>
+        <!-- ..................follow us.......................  -->
+<div>
+   <h3>Follow Us</h3>
+   <ul>
+       <li> <i class="fab fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=100075372720249"> Facebook</a></li>
+       <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/coding_seekho_official/"> Instagram</a></li>
+       <li><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/hariom-sah-b527141ba/"> LinkedIn</a></li>
+       <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/CodingSeekho"> Twitter</a></li>
+       <li><i class="fab fa-pinterest"></i> <a href="https://in.pinterest.com/business/hub"> Printerest</a></li>
+       <li><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/channel/UCi341CTiNxlqUoYGdqwW8eQ"> YouTube</a></li>
+   </ul>
+</div>
+<!-- ..............projects................  -->
+<div>
+    <h3>Practice Projects</h3>
+    <ul>
+        <li>Landing Pages</li>
+        <li>User Forms</li>
+        <li>Stylish Buttons</li>
+        <li>Slider</li>
+        <li>Navigation Bar</li>
+        
+    </ul>
+</div>
+<!-- ..............About Website......................  -->
+<div><h3>About Website</h3>
+
+    <ul>
+        <li> <i class="fas fa-address-card"></i>About Us</li>
+        <li><i class="far fa-address-book"></i> Contact Us</li>
+        <li><i class="fad fa-exclamation-triangle"></i>Disclaimer</li>
+        <li><i class="fas fa-eye"></i>Privacy Policy</li>
+        <li></li>
+    </ul>
+
+
+</div>
+
+<!-- ..............Our Services...................... -->
+<!-- <div>
+    <h3>Our Services</h3>
+
+    <ul>
+        <li>Tutorials</li>
+        <li>Buy Hosting</li>
+        <li>E-books</li>
+        <li>Hire Me</li>
+        <li>Source Code</li>
+    </ul>
+
+
+</div> -->
+
+    </footer>
+   
+<div style="padding: 10px; text-align: center; background-color: dodgerblue; color: white;font-weight: 700;">All 2022 Copyright reserved by CodingSeekho</div>
+</body>
+</html>
